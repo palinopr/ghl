@@ -2,8 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const rateLimit = require('express-rate-limit');
-const ghlRoutes = require('./routes/ghl');
-const { authenticate } = require('./middleware/auth');
 
 dotenv.config();
 
@@ -25,19 +23,51 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(limiter);
 
-app.use(authenticate);
-
+// Health check endpoint (no auth required)
 app.get('/health', (req, res) => {
   res.json({ status: 'healthy', timestamp: new Date().toISOString() });
 });
 
-app.use('/api/ghl', ghlRoutes);
+// Load routes after basic middleware
+try {
+  const ghlRoutes = require('./routes/ghl');
+  const { authenticate } = require('./middleware/auth');
+  
+  // Apply auth to API routes only
+  app.use('/api/ghl', authenticate, ghlRoutes);
+} catch (error) {
+  console.error('Error loading routes:', error);
+  app.get('/api/ghl/*', (req, res) => {
+    res.status(503).json({ error: 'Service temporarily unavailable' });
+  });
+}
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ error: 'Something went wrong!', message: err.message });
 });
 
-app.listen(PORT, '0.0.0.0', () => {
+// Root endpoint
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'GHL Middleware API',
+    version: '1.0.0',
+    endpoints: {
+      health: '/health',
+      api: '/api/ghl/*'
+    }
+  });
+});
+
+const server = app.listen(PORT, '0.0.0.0', () => {
   console.log(`GHL Middleware running on port ${PORT}`);
+  console.log(`Health check available at http://0.0.0.0:${PORT}/health`);
+});
+
+// Graceful shutdown
+process.on('SIGTERM', () => {
+  console.log('SIGTERM signal received: closing HTTP server');
+  server.close(() => {
+    console.log('HTTP server closed');
+  });
 });
