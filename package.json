@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "Modern, SEO-optimized boat rental website with integrated booking system",
   "scripts": {
-    "start": "python3 -m http.server 8000",
-    "dev": "python3 -m http.server 8000"
+    "start": "npx serve -s . -l 8080",
+    "dev": "npx serve -s . -l 3000"
   },
   "keywords": ["boat rental", "miami", "yacht charter", "booking system"],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^14.2.0"
+  }
 }
