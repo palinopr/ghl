@@ -95,4 +95,4 @@ class GHLClient {
   }
 }
 
-module.exports = new GHLClient();
+module.exports = GHLClient;
