@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leisure Boat Experience - Luxury Boat Rentals in Miami | Book Your Adventure Today</title>
+    <meta name="description" content="Experience Miami's waters in style. Rent luxury boats, yachts, and jet skis. Professional crew, flexible booking, best prices guaranteed. Book online in 60 seconds!">
+    <meta name="keywords" content="boat rental Miami, yacht charter Miami, jet ski rental, luxury boat experience, Miami water sports, boat tours Miami">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Leisure Boat Experience - Luxury Boat Rentals in Miami">
+    <meta property="og:description" content="Rent luxury boats and yachts in Miami. Professional crew, flexible booking, best prices. Book your adventure today!">
+    <meta property="og:image" content="/images/hero-boat.jpg">
+    <meta property="og:url" content="https://www.leisureboatexperience.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Schema.org markup for rich snippets -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BoatRental",
+        "name": "Leisure Boat Experience",
+        "description": "Luxury boat rentals in Miami",
+        "url": "https://www.leisureboatexperience.com",
+        "telephone": "+1-305-555-BOAT",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1000 Marina Boulevard",
+            "addressLocality": "Miami",
+            "addressRegion": "FL",
+            "postalCode": "33139",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "25.7617",
+            "longitude": "-80.1918"
+        },
+        "openingHours": "Mo-Su 08:00-20:00",
+        "priceRange": "$$$",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "324"
+        }
+    }
+    </script>
+    
+    <link rel="canonical" href="https://www.leisureboatexperience.com">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#home" class="logo">
+                    <span class="logo-text">Leisure Boat Experience</span>
+                </a>
+                <button class="mobile-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="#fleet">Our Fleet</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#booking">Booking</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#booking" class="cta-button">Book Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Experience Miami Waters<br>Like Never Before</h1>
+                <p class="hero-subtitle">Luxury boat rentals with professional crew. From sunset cruises to island adventures.</p>
+                <div class="hero-cta">
+                    <a href="#booking" class="btn btn-primary">Book Your Adventure</a>
+                    <a href="#fleet" class="btn btn-secondary">View Our Fleet</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4.9★</span>
+                        <span class="stat-label">Average Rating</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quick Booking Bar -->
+    <section class="quick-booking-bar">
+        <div class="container">
+            <form class="quick-booking-form" id="quickBookingForm">
+                <div class="form-group">
+                    <label for="boat-type">Boat Type</label>
+                    <select id="boat-type" name="boat-type">
+                        <option value="">Select Boat</option>
+                        <option value="yacht">Luxury Yacht</option>
+                        <option value="speedboat">Speed Boat</option>
+                        <option value="sailboat">Sailboat</option>
+                        <option value="jetski">Jet Ski</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" min="" required>
+                </div>
+                <div class="form-group">
+                    <label for="duration">Duration</label>
+                    <select id="duration" name="duration">
+                        <option value="2">2 Hours</option>
+                        <option value="4">4 Hours</option>
+                        <option value="8">Full Day</option>
+                        <option value="custom">Custom</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Guests</label>
+                    <select id="guests" name="guests">
+                        <option value="2">2 People</option>
+                        <option value="4">4 People</option>
+                        <option value="6">6 People</option>
+                        <option value="8">8 People</option>
+                        <option value="10+">10+ People</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Check Availability</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Fleet Section -->
+    <section id="fleet" class="fleet-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Premium Fleet</h2>
+                <p class="section-subtitle">Choose from our selection of luxury boats and watercraft</p>
+            </div>
+            <div class="fleet-grid">
+                <article class="fleet-card">
+                    <div class="fleet-image">
+                        <img src="images/yacht-luxury.jpg" alt="55ft Luxury Yacht - Perfect for parties and events" loading="lazy">
+                        <span class="fleet-badge">Most Popular</span>
+                    </div>
+                    <div class="fleet-content">
+                        <h3>55' Azimut Luxury Yacht</h3>
+                        <div class="fleet-features">
+                            <span>12 Guests</span>
+                            <span>3 Cabins</span>
+                            <span>Full Bar</span>
+                        </div>
+                        <p>Experience ultimate luxury with our flagship yacht. Perfect for special occasions, corporate events, or sunset cruises.</p>
+                        <div class="fleet-price">
+                            <span class="price-from">From</span>
+                            <span class="price-amount">$850/hour</span>
+                        </div>
+                        <a href="#booking" class="btn btn-primary" data-boat="yacht-55">Book This Yacht</a>
+                    </div>
+                </article>
+
+                <article class="fleet-card">
+                    <div class="fleet-image">
+                        <img src="images/speedboat.jpg" alt="38ft Speed Boat - Fast and fun water adventures" loading="lazy">
+                        <span class="fleet-badge">Best Value</span>
+                    </div>
+                    <div class="fleet-content">
+                        <h3>38' Sea Ray Sport</h3>
+                        <div class="fleet-features">
+                            <span>8 Guests</span>
+                            <span>Bluetooth Audio</span>
+                            <span>Snorkel Gear</span>
+                        </div>
+                        <p>Fast, fun, and perfect for island hopping. Ideal for small groups wanting adventure and water sports.</p>
+                        <div class="fleet-price">
+                            <span class="price-from">From</span>
+                            <span class="price-amount">$450/hour</span>
+                        </div>
+                        <a href="#booking" class="btn btn-primary" data-boat="speedboat-38">Book This Boat</a>
+                    </div>
+                </article>
+
+                <article class="fleet-card">
+                    <div class="fleet-image">
+                        <img src="images/sailboat.jpg" alt="42ft Sailboat - Romantic sailing experience" loading="lazy">
+                    </div>
+                    <div class="fleet-content">
+                        <h3>42' Beneteau Sailboat</h3>
+                        <div class="fleet-features">
+                            <span>6 Guests</span>
+                            <span>2 Cabins</span>
+                            <span>Sunset Ready</span>
+                        </div>
+                        <p>Romantic sailing experience with the wind in your hair. Perfect for couples and small groups.</p>
+                        <div class="fleet-price">
+                            <span class="price-from">From</span>
+                            <span class="price-amount">$350/hour</span>
+                        </div>
+                        <a href="#booking" class="btn btn-primary" data-boat="sailboat-42">Book This Sailboat</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tailored Experiences</h2>
+                <p class="section-subtitle">More than just a boat rental - create unforgettable memories</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🌅</div>
+                    <h3>Sunset Cruises</h3>
+                    <p>Watch Miami's spectacular sunset from the water. Includes champagne and light appetizers.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏝️</div>
+                    <h3>Island Hopping</h3>
+                    <p>Explore hidden gems and pristine beaches. Visit multiple islands in one unforgettable trip.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎉</div>
+                    <h3>Private Events</h3>
+                    <p>Birthdays, proposals, corporate events. We'll help make your special occasion perfect.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🐠</div>
+                    <h3>Snorkeling Tours</h3>
+                    <p>Discover underwater treasures with guided snorkeling tours. Equipment included.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎣</div>
+                    <h3>Fishing Charters</h3>
+                    <p>Deep sea or coastal fishing with experienced guides. All gear provided.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👨‍✈️</div>
+                    <h3>Professional Crew</h3>
+                    <p>Licensed captains and friendly crew ensure your safety and enjoyment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Book Your Adventure</h2>
+                <p class="section-subtitle">Simple, secure booking in just 60 seconds</p>
+            </div>
+            <div class="booking-wrapper">
+                <div class="booking-form-container">
+                    <form id="mainBookingForm" class="booking-form">
+                        <div class="form-step active" data-step="1">
+                            <h3>Step 1: Choose Your Experience</h3>
+                            <div class="form-group">
+                                <label for="experience-type">Experience Type</label>
+                                <select id="experience-type" name="experience-type" required>
+                                    <option value="">Select Experience</option>
+                                    <option value="sunset-cruise">Sunset Cruise</option>
+                                    <option value="island-hopping">Island Hopping</option>
+                                    <option value="fishing">Fishing Charter</option>
+                                    <option value="party">Private Party</option>
+                                    <option value="custom">Custom Experience</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="boat-selection">Select Boat</label>
+                                <select id="boat-selection" name="boat-selection" required>
+                                    <option value="">Choose a boat</option>
+                                    <option value="yacht-55">55' Luxury Yacht ($850/hr)</option>
+                                    <option value="speedboat-38">38' Speed Boat ($450/hr)</option>
+                                    <option value="sailboat-42">42' Sailboat ($350/hr)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-step" data-step="2">
+                            <h3>Step 2: Date & Time</h3>
+                            <div class="form-group">
+                                <label for="booking-date">Date</label>
+                                <input type="date" id="booking-date" name="booking-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="start-time">Start Time</label>
+                                <select id="start-time" name="start-time" required>
+                                    <option value="">Select time</option>
+                                    <option value="08:00">8:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="14:00">2:00 PM</option>
+                                    <option value="16:00">4:00 PM</option>
+                                    <option value="18:00">6:00 PM</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="booking-duration">Duration</label>
+                                <select id="booking-duration" name="booking-duration" required>
+                                    <option value="2">2 Hours</option>
+                                    <option value="4">4 Hours</option>
+                                    <option value="6">6 Hours</option>
+                                    <option value="8">Full Day (8 Hours)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-step" data-step="3">
+                            <h3>Step 3: Contact Information</h3>
+                            <div class="form-group">
+                                <label for="full-name">Full Name</label>
+                                <input type="text" id="full-name" name="full-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="guest-count">Number of Guests</label>
+                                <input type="number" id="guest-count" name="guest-count" min="1" max="12" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="special-requests">Special Requests (Optional)</label>
+                                <textarea id="special-requests" name="special-requests" rows="3"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-secondary" id="prevBtn" style="display: none;">Previous</button>
+                            <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
+                            <button type="submit" class="btn btn-primary" id="submitBtn" style="display: none;">Complete Booking</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="booking-summary">
+                    <h3>Booking Summary</h3>
+                    <div id="bookingSummary">
+                        <p>Select your options to see pricing</p>
+                    </div>
+                    <div class="trust-badges">
+                        <div class="trust-badge">
+                            <span>✓</span> Instant Confirmation
+                        </div>
+                        <div class="trust-badge">
+                            <span>✓</span> Best Price Guarantee
+                        </div>
+                        <div class="trust-badge">
+                            <span>✓</span> Free Cancellation (24hrs)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Guests Say</h2>
+                <p class="section-subtitle">Real reviews from real adventures</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Amazing experience! The crew was professional and the yacht was immaculate. Made our anniversary unforgettable."</p>
+                    <div class="testimonial-author">
+                        <strong>Sarah & Mike Johnson</strong>
+                        <span>Anniversary Cruise</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Best decision of our Miami trip! Island hopping was incredible and the captain knew all the best spots."</p>
+                    <div class="testimonial-author">
+                        <strong>David Chen</strong>
+                        <span>Island Hopping Tour</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Corporate event was a huge success. The team handled everything perfectly. Will definitely book again!"</p>
+                    <div class="testimonial-author">
+                        <strong>Jennifer Martinez</strong>
+                        <span>Corporate Event</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What's included in the rental?</h3>
+                    <p>All rentals include fuel, licensed captain, safety equipment, ice, water, and basic sound system. Additional amenities vary by boat.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I bring my own food and drinks?</h3>
+                    <p>Yes! You're welcome to bring your own food and beverages. We also offer catering options if you prefer.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What happens if weather is bad?</h3>
+                    <p>Safety first! We offer free rescheduling or full refund if weather conditions are unsafe for boating.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do I need a boating license?</h3>
+                    <p>No! All our boats come with experienced, licensed captains who handle all the navigation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Questions? We're here to help!</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>📍 Location</h3>
+                        <p>1000 Marina Boulevard<br>Miami, FL 33139</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📞 Phone</h3>
+                        <p><a href="tel:+13055555555">+1 (305) 555-BOAT</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>✉️ Email</h3>
+                        <p><a href="mailto:info@leisureboatexperience.com">info@leisureboatexperience.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>🕐 Hours</h3>
+                        <p>Daily: 8:00 AM - 8:00 PM</p>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.5685825360286!2d-80.19179868497582!3d25.784875683621907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b6a4a5e5a5a5%3A0x5a5a5a5a5a5a5a5a!2sMiami%20Marina!5e0!3m2!1sen!2sus!4v1234567890"
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        title="Leisure Boat Experience Location">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready for Your Adventure?</h2>
+                <p>Book now and get 10% off your first rental!</p>
+                <a href="#booking" class="btn btn-primary btn-large">Book Your Boat Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Leisure Boat Experience</h3>
+                    <p>Miami's premier boat rental service. Creating unforgettable memories on the water since 2015.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#fleet">Our Fleet</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#booking">Book Now</a></li>
+                        <li><a href="#testimonials">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Sunset Cruises</a></li>
+                        <li><a href="#">Island Tours</a></li>
+                        <li><a href="#">Fishing Charters</a></li>
+                        <li><a href="#">Private Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Newsletter</h4>
+                    <p>Get exclusive deals and updates!</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Leisure Boat Experience. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Success Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Booking Confirmed! 🎉</h2>
+            <p>Thank you for choosing Leisure Boat Experience. We've sent a confirmation email with all the details.</p>
+            <p>Booking Reference: <strong id="bookingRef">LBE-2024-XXXXX</strong></p>
+            <button class="btn btn-primary" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
