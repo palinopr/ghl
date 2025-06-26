@@ -28,6 +28,11 @@ app.get('/health', (req, res) => {
   res.json({ status: 'healthy', timestamp: new Date().toISOString() });
 });
 
+// Favicon handler
+app.get('/favicon.ico', (req, res) => {
+  res.status(204).end();
+});
+
 // Load routes after basic middleware
 try {
   const ghlRoutes = require('./routes/ghl');
